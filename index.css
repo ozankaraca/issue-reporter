@@ -1,45 +1,47 @@
 div.logo {
- white-space: nowrap;
+  white-space: nowrap;
 }
 
 div.logo * {
- display: inline;
+  display: inline;
 }
 
 .topnav {
-    background-color: #333;
-    overflow: hidden;
-  }
-  
-  .topnav a {
-    float: left;
-    display: block;
-    color: rgb(15, 15, 15);
-    padding: 14px 16px;
-    margin: auto;
-    font-size: 20px;
-    line-height: 0%;
-  }
-  
-  .topnav a:hover {
-    color: rgb(90, 90, 90);
-  }
+  background-color: #333;
+  overflow: hidden;
+}
 
-  .topnav a.active {
-    color: black;
-  }
+.topnav a {
+  float: left;
+  display: block;
+  color: rgb(15, 15, 15);
+  padding: 14px 16px;
+  margin: auto;
+  font-size: 20px;
+  line-height: 0%;
+}
+
+.topnav a:hover {
+  color: rgb(90, 90, 90);
+}
+
+.topnav a.active {
+  color: black;
+}
 
 .topnav a.link:hover {
   color: blue;
-  outline: solid 5px #FC5185;
+  outline: solid 5px #fc5185;
   transition: outline 0.6s linear;
 }
 
 .topnav a.border-button {
-  box-shadow: 0px 0px 0px 5px #FC5185;
+  box-shadow: 0px 0px 0px 5px #fc5185;
   transition: box-shadow 0.6s linear;
 }
-.topnav a.border-button:hover { box-shadow: 0px 0px 0px 10px #FC5185; }
+.topnav a.border-button:hover {
+  box-shadow: 0px 0px 0px 10px #fc5185;
+}
 
 .nav > .nav-links > a.cool-link {
   display: inline-block;
@@ -54,153 +56,153 @@ div.logo * {
   width: 0%;
   height: 2px;
   background: rgb(90, 90, 90);
-  transition: width .3s;
+  transition: width 0.3s;
 }
 
 .nav > .nav-links > a.cool-link:hover::after {
   width: 100%;
-  transition: width .3s;
+  transition: width 0.3s;
 }
 
 .nav > .nav-links > a.cool-link:hover {
   color: rgb(90, 90, 90);
-  transition: color, .3s;
+  transition: color, 0.3s;
 }
 
-div.navigation { 
+div.navigation {
   position: absolute;
 
   top: 30px;
   padding-bottom: 25px;
   padding-left: 60vw;
-
 }
 
 .logoBorder {
-    height: 2px;
-    background-color:gray;
-    margin-bottom: 0%;
-    filter: blur(2px);
+  height: 2px;
+  background-color: gray;
+  margin-bottom: 0%;
+  filter: blur(2px);
 }
 
 .logoImage {
-    position: relative;
-    left: 25px;
-    top: 2vh;
+  position: relative;
+  left: 25px;
+  top: 2vh;
 
-    padding-bottom: 25px;
-    
-    width: 100%;
-    max-width: 250px;
-    height: auto;
+  padding-bottom: 25px;
+
+  width: 100%;
+  max-width: 250px;
+  height: auto;
 }
 
 .blueLine {
-    padding-top: 0.5%;
-    background-color: rgb(23,140,210);
-    padding-bottom: 0.5%;   
+  padding-top: 0.5%;
+  background-color: rgb(23, 140, 210);
+  padding-bottom: 0.5%;
 }
 
 .blueLine a {
-    font-size: 30px;
-    font-weight: bold;
-    padding-left: 25px;
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 25px;
 }
 
 .blueLineBorder {
-    background-color:gray;
-    margin-top: 0%;
-    filter: blur(2px);
-    height: 3px;
+  background-color: gray;
+  margin-top: 0%;
+  filter: blur(2px);
+  height: 3px;
 }
 
 .UserInput {
-    padding-top: 1%;
-    padding-left: 25px;
+  padding-top: 1%;
+  padding-left: 25px;
 }
 
 .UserInput label {
-    font-size: 20px;
-    line-height: 10px;
+  font-size: 20px;
+  line-height: 10px;
 }
 
-.UserInput input[type=text], select {
-    margin-top: 0%;
-    width: 25%;
-    padding: 12px 10px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
+.UserInput input[type='text'],
+select {
+  margin-top: 0%;
+  width: 25%;
+  padding: 12px 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 
-  .UserInput input[type=text]:focus { 
-    outline: none;
-    border-color: rgb(23,140,210);
-    box-shadow: 0 0 10px rgb(23,140,210);
-    transition: all 0.35s;
-  }
+.UserInput input[type='text']:focus {
+  outline: none;
+  border-color: rgb(23, 140, 210);
+  box-shadow: 0 0 10px rgb(23, 140, 210);
+  transition: all 0.35s;
+}
 
-  .newline {
-      padding: 1%
-  }
+.newline {
+  padding: 1%;
+}
 
-  .buttons {
-    text-overflow: ellipsis; 
-    overflow: hidden; 
-    white-space: nowrap;
-    padding-top: 1%;
-    padding-left: 25px;
-  }
+.buttons {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-top: 1%;
+  padding-left: 25px;
+}
 
-  .buttons input {
-    margin-top: 0%;
-    width: 12.5%;
-    padding: 12px 10px;
-    display: inline-block;
-    color: white;
-    border-color: #333;
-    font-weight: bold;
-    border-radius: 4px;
-    box-sizing: border-box;
+.buttons input {
+  margin-top: 0%;
+  width: 12.5%;
+  padding: 12px 10px;
+  display: inline-block;
+  color: white;
+  border-color: #333;
+  font-weight: bold;
+  border-radius: 4px;
+  box-sizing: border-box;
 
-    border-radius: 4px;
-  }
+  border-radius: 4px;
+}
 
- .buttons .submitbutton {
-    background-color: rgb(22, 123, 182);
-    border: 2px solid #333;
-    transition: all .35s;
- }
- 
-  .buttons .submitbutton:hover {
-   transform: translateY(-3px);
-   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-   background-color: rgb(23,140,210);
- }
- 
-  .buttons .submitbutton:active {
-   transform: translateY(-1px);
-   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-   background-color: rgb(15, 120, 180);
- }
-
- .buttons .cancelbutton {
+.buttons .submitbutton {
+  background-color: rgb(22, 123, 182);
   border: 2px solid #333;
-    background-color: rgb(120, 120, 120);
-    transition: all .35s;
- }
+  transition: all 0.35s;
+}
+
+.buttons .submitbutton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: rgb(23, 140, 210);
+}
+
+.buttons .submitbutton:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgb(15, 120, 180);
+}
+
+.buttons .cancelbutton {
+  border: 2px solid #333;
+  background-color: rgb(120, 120, 120);
+  transition: all 0.35s;
+}
 
 .buttons .cancelbutton:hover {
- transform: translateY(-3px);
- box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
- background-color: rgb(120, 120, 120);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: rgb(120, 120, 120);
 }
 
 .buttons .cancelbutton:active {
- transform: translateY(-1px);
- box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
- background-color: rgb(75, 75, 75);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  background-color: rgb(75, 75, 75);
 }
 
 .col-fluid {
@@ -226,13 +228,13 @@ div.navigation {
   left: 50%;
   width: 40%;
   height: 20%;
-  top:54%;
+  top: 54%;
 }
 
 .container-md .row-md .col-fluid .before-issue-label {
   position: absolute;
   left: 50%;
-  top:  52%;
+  top: 52%;
 }
 
 textarea {
@@ -242,14 +244,14 @@ textarea {
   resize: none;
 }
 
-textarea:focus { 
+textarea:focus {
   outline: none;
-  border-color: rgb(23,140,210);
-  box-shadow: 0 0 10px rgb(23,140,210);
+  border-color: rgb(23, 140, 210);
+  box-shadow: 0 0 10px rgb(23, 140, 210);
   transition: all 0.35s;
 }
 
-@media (max-width:925px) { 
+@media (max-width: 925px) {
   .col-fluid {
     position: absolute;
     left: 25px;
@@ -257,14 +259,14 @@ textarea:focus {
   }
 
   #email-label {
-    position:relative;
+    position: relative;
     top: -230px;
   }
 
   #email {
     position: relative;
     width: 90vw;
-    top:25px;
+    top: 25px;
   }
 
   #informwhenresolved {
@@ -303,7 +305,7 @@ textarea:focus {
     height: 200px;
   }
 
-  .buttons input[type=submit] {
+  .buttons input[type='submit'] {
     width: 90vw;
   }
 
@@ -312,16 +314,16 @@ textarea:focus {
     top: 850px;
     background-color: rgb(22, 123, 182);
     border: 2px solid #333;
-    transition: all .35s;
- }
+    transition: all 0.35s;
+  }
 
   .buttons .cancelbutton {
     position: absolute;
     top: 915px;
     border: 2px solid #333;
     background-color: rgb(120, 120, 120);
-    transition: all .35s;
-   }
+    transition: all 0.35s;
+  }
 }
 
 #email {
@@ -354,7 +356,7 @@ textarea:focus {
 
 .nav > .nav-links {
   position: absolute;
-  right:0;
+  right: 0;
   top: 5px;
   display: inline-block;
   font-size: 18px;
@@ -383,20 +385,20 @@ textarea:focus {
   width: 0%;
   height: 2px;
   background: rgb(90, 90, 90);
-  transition: width .3s;
+  transition: width 0.3s;
 }
 
 .nav .nav-links a:hover::after {
   width: 100%;
-  transition: width .3s;
+  transition: width 0.3s;
 }
 
 .nav .nav-links a:hover {
   color: rgb(90, 90, 90);
-  transition: color, .3s;
+  transition: color, 0.3s;
 }
 
-@media (max-width:512px) {
+@media (max-width: 512px) {
   .nav > .nav-btn {
     display: inline-block;
     position: absolute;
@@ -414,12 +416,12 @@ textarea:focus {
     display: block;
     width: 25px;
     height: 10px;
-    color:rgb(40, 40, 40);
-    transition: all .35s;
+    color: rgb(40, 40, 40);
+    transition: all 0.35s;
   }
 
   .nav > .nav-btn > label > .fafabars:hover {
-    color:rgb(80, 80, 80);
+    color: rgb(80, 80, 80);
     transform: translateY(-3px);
   }
   .nav > .nav-links {
@@ -449,9 +451,9 @@ textarea:focus {
 }
 
 #logo {
-    position: relative;
-    width: 300%;
-    max-width: 400x;
-    height: auto;
-    bottom: 5px;
+  position: relative;
+  width: 300%;
+  max-width: 400x;
+  height: auto;
+  bottom: 5px;
 }
