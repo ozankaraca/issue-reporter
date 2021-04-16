@@ -153,7 +153,7 @@ div.navigation {
     padding-left: 25px;
   }
 
-  .buttons input[type=submit] {
+  .buttons input {
     margin-top: 0%;
     width: 12.5%;
     padding: 12px 10px;
