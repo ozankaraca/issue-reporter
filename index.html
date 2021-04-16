@@ -1,21 +1,188 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Simplesurance Issue Reporter</title>
-  </head>
-  <body>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  </body>
+
+  <title>Simplesurance Issue Reporter</title>
+</head>
+
+<body>
+  <div class="nav">
+    <input type="checkbox" id="nav-check">
+    <div class="nav-header">
+      <div class="nav-title">
+        <img src="assets/sisu-logo.png" id="logo">
+      </div>
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <div class="fafabars">
+          <i class="fa fa-bars"></i>
+        </div>
+      </label>
+    </div>
+
+    <div class="nav-links">
+      <a href="#" target="_blank">Home</a>
+      <a href="#" target="_blank">Contact</a>
+      <a href="#" target="_blank">About</a>
+    </div>
+  </div>
+
+  <!--setup logo and border below logo-->
+  <hr class="logoBorder">
+
+  <div class="blueLine">
+    <a>Simplesurance issue-reporter</a>
+  </div>
+  <hr class="blueLineBorder">
+
+  <div class="UserInput">
+    <form>
+      <div class="container-md">
+        <div class="row-md">
+          <div class="col-fluid">
+            <label id="email-label" for="email">E-Mail:</label><br>
+          </div>
+          <div class="col-fluid">
+            <label class="issue-explanation-label" for="issue-explanation">Please tell us what the issue did</label><br>
+            <textarea wrap="hard" class="form-control issue-explanation" id="issueExplanation" name="issue-explanation"
+              rows="10" cols="50" maxlength="250"></textarea>
+          </div>
+          <div class="col-fluid">
+            <label class="before-issue-label" for="issue-explanation">Please tell us what you did before the issue
+              occured</label><br>
+            <textarea wrap="hard" class="form-control before-issue" id="beforeIssue" name="before-issue" rows="10"
+              cols="50" maxlength="250"></textarea>
+          </div>
+        </div>
+        <input type="text" id="email" name="email" placeholder="Your E-Mail address"></input><br>
+      </div>
+    </form>
+
+    <input type="checkbox" id="informwhenresolved" name="informwhenresolved">
+    <label id="informwhenresolvedlabel" for="informwhenresolved">Inform me when the issue is resolved</label>
+  </div>
+
+  <div class="newline"></div>
+
+  <div class="UserInput">
+    <form>
+      <label id="problemtypelabel" for="problemtype">Tell us the type of issue you are facing:</label><br>
+      <select id="problemtype" name="problemtype">
+        <option value="Issues with Payment">Issues with payment</option>
+        <option value="Website is Not Redirecting">Website not redirecting</option>
+        <option value="Website is Not Loading">Website not loading</option>
+        <option value="Other">Other...</option>
+      </select>
+    </form>
+  </div>
+
+  <div class="newline"></div>
+
+  <div class="buttons">
+    <form>
+      <input class="cancelbutton" id="cancelButton" type="button" value="Cancel">
+      <input class="submitbutton" id="submitButton" type="button" value="Submit">
+    </form>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+<script>
+  $(document).ready(function () {
+
+  })
+
+  function clearForm() {
+    document.getElementById('email').value = ""
+    document.getElementById('issueExplanation').value = ""
+    document.getElementById('beforeIssue').value = ""
+    document.getElementById('informwhenresolved').checked = false
+  }
+
+  document.getElementById('cancelButton').addEventListener('click', function () {
+    clearForm()
+    swal({
+      title: "Reset!",
+      text: "All values have been resetted!",
+      icon: "warning",
+    });
+  })
+
+  document.getElementById('submitButton').addEventListener('click', function () {
+
+    const email = document.getElementById('email').value
+    const issueExp = document.getElementById('issueExplanation').value
+    const beforeIssue = document.getElementById('beforeIssue').value
+    const problemType = document.getElementById('problemtype').value
+
+    console.log(email, issueExp, beforeIssue, problemType)
+
+    const message = {
+      "text": "You have a new issue!",
+      "attachments": [
+        {
+          "text": `Issue Type: ${problemType}`
+        },
+        {
+          "text": `Description: ${issueExp}`
+        },
+        {
+          "text": `Steps to Reproduce: ${beforeIssue}`
+        },
+        {
+          "text": `Email: ${email}`
+        }
+      ]
+    }
+
+    var data = JSON.stringify(message);
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.addEventListener("readystatechange", function () {
+      if (this.readyState === 4) {
+        console.log(this.responseText);
+        swal({
+          title: "Success!",
+          text: "Your issue has been submitted!",
+          icon: "success",
+        });
+        clearForm()
+      }
+    });
+
+    xhr.open("POST", "https://hooks.slack.com/services/");
+    xhr.setRequestHeader("Content-type", "application/json");
+
+    xhr.send(data);
+
+  })
+
+
+
+</script>
+
 </html>
