@@ -17,31 +17,29 @@
       <input type="checkbox" id="nav-check">
       <div class="nav-header">
         <div class="nav-title">
-          <img href="https://files.slack.com/files-pri/TEWHDQK2A-F01UBLFKS68/image.png">
+          <img src="https://files.slack.com/files-pri/TEWHDQK2A-F01UBLFKS68/image.png" id="logo">
         </div>
       </div>
       <div class="nav-btn">
         <label for="nav-check">
-          <span></span>
-          <span></span>
-          <span></span>
+          <div class="fafabars">
+            <i class="fa fa-bars"></i>
+          </div>
         </label>
       </div>
       
-      <div class="nav-links">
-        <a href="//github.io/jo_geek" target="_blank">Github</a>
-        <a href="http://stackoverflow.com/users/4084003/" target="_blank">Stackoverflow</a>
-        <a href="https://in.linkedin.com/in/jonesvinothjoseph" target="_blank">LinkedIn</a>
-        <a href="https://codepen.io/jo_Geek/" target="_blank">Codepen</a>
-        <a href="https://jsfiddle.net/user/jo_Geek/" target="_blank">JsFiddle</a>
-      </div>
+        <div class="nav-links">
+          <a href="#" target="_blank">Home</a>
+          <a href="#" target="_blank">Contact</a>
+          <a href="#" target="_blank">About</a>
+        </div>
     </div>
 
     <!--setup logo and border below logo-->
     <hr class="logoBorder">
 
     <div class="blueLine">
-      <a>Simplesurance issue-reporter - Made by Deniz Cetin</a>
+      <a>Simplesurance issue-reporter</a>
     </div>
     <hr class="blueLineBorder">
 
@@ -50,14 +48,14 @@
           <div class="container-md">
             <div class="row-md">
               <div class="col-fluid">
-                <label for="email">E-Mail:</label><br>
+                <label id="email-label" for="email">E-Mail:</label><br>
               </div>
               <div class="col-fluid">
-                <label class="issue-explanation-label" for="issue-explanation">Please tell us what the issue did:</label><br>
+                <label class="issue-explanation-label" for="issue-explanation">Please tell us what the issue did</label><br>
                 <textarea wrap="hard" class="form-control issue-explanation" name="issue-explanation" rows="10" cols="50" maxlength="250"></textarea>
               </div>
               <div class="col-fluid">
-                <label class="before-issue-label" for="issue-explanation">Please tell us what you did before the issue occured:</label><br>
+                <label class="before-issue-label" for="issue-explanation">Please tell us what you did before the issue occured</label><br>
                 <textarea wrap="hard" class="form-control before-issue" name="before-issue" rows="10" cols="50" maxlength="250"></textarea>
               </div>
             </div>
@@ -66,14 +64,14 @@
         </form>
 
         <input type="checkbox" id="informwhenresolved" name="informwhenresolved">
-        <label for="informwhenresolved">Inform me when the issue is resolved</label>
+        <label id="informwhenresolvedlabel" for="informwhenresolved">Inform me when the issue is resolved</label>
       </div>
 
     <div class="newline"></div>
 
     <div class ="UserInput">
       <form>
-        <label for="problemtype">Tell us the type of issue you are facing:</label><br>
+        <label id="problemtypelabel" for="problemtype">Tell us the type of issue you are facing:</label><br>
         <select id="problemtype" name="problemtype">
           <option value="payment">Issues with payment</option>
           <option value="redirecting">Website not redirecting</option>
