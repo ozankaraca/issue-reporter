@@ -57,14 +57,14 @@
           </div>
           <div class="col-fluid">
             <label class="issue-explanation-label" for="issue-explanation">Please tell us what the issue did</label><br>
-            <textarea wrap="hard" class="form-control issue-explanation" id="issueExplanation" name="issue-explanation" rows="10" cols="50"
-              maxlength="250"></textarea>
+            <textarea wrap="hard" class="form-control issue-explanation" id="issueExplanation" name="issue-explanation"
+              rows="10" cols="50" maxlength="250"></textarea>
           </div>
           <div class="col-fluid">
             <label class="before-issue-label" for="issue-explanation">Please tell us what you did before the issue
               occured</label><br>
-            <textarea wrap="hard" class="form-control before-issue" id="beforeIssue" name="before-issue" rows="10" cols="50"
-              maxlength="250"></textarea>
+            <textarea wrap="hard" class="form-control before-issue" id="beforeIssue" name="before-issue" rows="10"
+              cols="50" maxlength="250"></textarea>
           </div>
         </div>
         <input type="text" id="email" name="email" placeholder="Your E-Mail address"></input><br>
@@ -81,10 +81,10 @@
     <form>
       <label id="problemtypelabel" for="problemtype">Tell us the type of issue you are facing:</label><br>
       <select id="problemtype" name="problemtype">
-        <option value="payment">Issues with payment</option>
-        <option value="redirecting">Website not redirecting</option>
-        <option value="loading">Website not loading</option>
-        <option value="other">Other...</option>
+        <option value="Issues with Payment">Issues with payment</option>
+        <option value="Website is Not Redirecting">Website not redirecting</option>
+        <option value="Website is Not Loading">Website not loading</option>
+        <option value="Other">Other...</option>
       </select>
     </form>
   </div>
@@ -94,7 +94,7 @@
   <div class="buttons">
     <form>
       <input class="cancelbutton" id="cancelButton" type="button" value="Cancel">
-      <input class="submitbutton" type="submit" value="Submit">
+      <input class="submitbutton" id="submitButton" type="button" value="Submit">
     </form>
   </div>
 
@@ -115,16 +115,70 @@
 
   })
 
-  document.getElementById('cancelButton').addEventListener('click', function () {
+  function clearForm () {
     document.getElementById('email').value = ""
     document.getElementById('issueExplanation').value = ""
     document.getElementById('beforeIssue').value = ""
     document.getElementById('informwhenresolved').checked = false
+  }
+
+  document.getElementById('cancelButton').addEventListener('click', function () {
+    clearForm()
     swal({
       title: "Reset!",
       text: "All values have been resetted!",
       icon: "warning",
     });
+  })
+
+  document.getElementById('submitButton').addEventListener('click', function () {
+
+    const email = document.getElementById('email').value
+    const issueExp = document.getElementById('issueExplanation').value
+    const beforeIssue = document.getElementById('beforeIssue').value
+    const problemType = document.getElementById('problemtype').value
+
+    console.log(email, issueExp, beforeIssue, problemType)
+
+    const message = {
+      "text": "You have a new issue!",
+      "attachments": [
+        {
+          "text": `Issue Type: ${problemType}`
+        },
+        {
+          "text": `Description: ${issueExp}`
+        },
+        {
+          "text": `Steps to Reproduce: ${beforeIssue}`
+        },
+        {
+          "text": `Email: ${email}`
+        }
+      ]
+    }
+
+    var data = JSON.stringify(message);
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.addEventListener("readystatechange", function () {
+      if (this.readyState === 4) {
+        console.log(this.responseText);
+        swal({
+          title: "Success!",
+          text: "Your issue has been submitted!",
+          icon: "success",
+        });
+        clearForm()
+      }
+    });
+
+    xhr.open("POST", "https://hooks.slack.com/services/");
+    xhr.setRequestHeader("Content-type", "application/json");
+
+    xhr.send(data);
+
   })
 
 
